@@ -1,0 +1,388 @@
+@charset "euc-jp";
+
+/* ==============================================================================
+ *     CSS for touch-screen : common.css
+ *     ============================================================================== */
+
+/* ----------------------------------------------------------
+ *   Common Settings : css-reset
+ *   ---------------------------------------------------------- */
+html{
+font-family: "MS PGothic","Osaka","sans-serif";
+overflow-y:scroll;
+-webkit-text-size-adjust:none;
+}
+
+body{
+color:#333;
+background:#FFFFFF;
+letter-spacing:0.00em;
+font-size:12px;
+*font-size:78%;
+font-family: sans-serif;
+}
+
+body,div,h1,h2,h3,h4,h5,h6,p,ul,ol,li,dl,dt,dd,form,fieldset,legend,input,textarea,pre,code,blockquote,th,td{
+margin:0;
+padding:0;
+}
+
+div,h2,h3,h4,h5,h6,p,li,dt,dd,pre,code,blockquote,th,td{
+word-break:break-all;
+}
+
+br{
+letter-spacing:0;
+}
+
+fieldset,img{
+border:0;
+}
+
+li{
+list-style:none;
+}
+
+caption,th{
+text-align:left;
+}
+
+h1,h2,h3,h4,h5,h6,th{
+font-size:100%;
+font-weight:normal;
+font-style:normal;
+}
+
+input,textarea,select{
+font-family:inherit;
+font-size:inherit;
+font-weight:inherit;
+color:#333;
+}
+
+input[type="submit"]{
+cursor:pointer;
+}
+
+select{
+background-color:#ffffff !important;
+}
+
+address,caption,cite,code,dfn,var{
+font-style:normal;
+font-weight:normal;
+}
+
+abbr,acronym{
+border:0;
+font-variant:normal;
+}
+
+del,u{
+text-decoration:none;
+}
+
+/* ---------- text ---------- */
+body{
+line-height:1.4;
+}
+
+.userInput{
+line-height:1.2;
+word-break:break-all;
+}
+
+/* clearFix */
+.clearfix{}
+
+.clearfix:after{
+content:"";
+display:block;
+clear:both;
+}
+
+a{
+text-decoration:none;
+}
+
+a:link{
+color:#258fb8;
+}
+
+a:visited{
+color:#258fb8;
+}
+
+a:focus{
+color:#996600;
+}
+
+/* ---------- formSetting ---------- */
+input[type="email"],
+input[type="text"],
+input[type="password"]{
+padding:0.3em;
+font-size:120%;
+color:#666;
+}
+
+input[type="button"],
+input[type="submit"]{
+padding:0.25em 0 0.15em;
+font-size:120%;
+border:1px solid #ccc;
+-webkit-border-radius:5px;  /* valid if with BG-gradient */
+}
+
+input[type="image"]{
+-webkit-border-radius:0;
+}
+
+input[type="checkbox"]{
+margin-right:4px;
+width:18px;
+height:18px;
+vertical-align:baseline;
+}
+
+input[type="checkbox"] + label{
+color:#666;
+}
+
+select:disabled{
+opacity:0.35;
+}
+
+textarea{
+color:#666;
+}
+
+/* ---------- safari setting ---------- */
+html[xmlns*=""] body:last-child input[type="file"]{
+background-color:transparent;
+border:none;
+}
+*input[type="file"]{
+}
+
+html*input[type="file"]{
+background-color:transparent;
+}
+
+
+
+
+/* ----------------------------------------------------------
+ *   Common Settings : frames
+ *   ---------------------------------------------------------- */
+html,
+body{
+height:100%;
+}
+
+#page{
+width:100%;
+position:relative;
+height:100%;
+min-height:100%;
+background-color:#fff;
+}
+
+body > #page{
+height:auto;
+}
+
+#mainDisplay{
+padding-bottom:175px;
+}
+
+#footDisplay{
+width:100%;
+position:absolute;
+bottom:0;
+height:177px;
+}
+
+#headerArea{}
+#mainArea{}
+#footerArea{}
+
+
+
+
+/* ----------------------------------------------------------
+ *   Common Settings : page
+ *   ---------------------------------------------------------- */
+#page{
+font-size:117%;
+}
+
+
+
+
+/* ----------------------------------------------------------
+ *   Common Settings : Header
+ *   ---------------------------------------------------------- */
+#headerArea{
+position:relative;
+background:#fff;
+min-height:38px;
+zoom:1;
+}
+
+#headerArea:after{
+content:".";
+display:block;
+height:0;
+clear:both;
+visibility:hidden;
+}
+
+/* ---------- [N001] head-logo ---------- */
+#headerArea > h1{
+float:left;
+width:120px;
+height:52px;
+}
+
+#headerArea > h1 span.logo,
+#headerArea > h1 a{
+display:block;
+padding:7px 0 7px 10px;
+width:110px;
+height:38px;
+}
+
+
+
+
+/* ----------------------------------------------------------
+ *   Common Settings : Header-Ad
+ *   ---------------------------------------------------------- */
+.gHeadAdArea01{
+}
+
+.gHeadAdArea01 div.adMain{
+margin:0 auto 5px;
+height:48px;
+width:320px;
+overflow:hidden;
+}
+
+
+
+
+/* ----------------------------------------------------------
+ *   Common Settings : Footer
+ *   ---------------------------------------------------------- */
+#footerArea{
+border-top:1px dotted #ccc;
+padding:0 0 15px;
+}
+
+#footerArea:first-child{
+border-top:none;
+}
+
+/* ---------- [N005] address ---------- */
+#footerArea address,
+#footerArea .copyright{
+text-align:center;
+font-size:86%;
+color:#999;
+}
+
+#footerArea address{
+padding:20px 0 0;
+}
+
+#footerArea:first-child address:first-child{
+padding-top:0;
+}
+
+
+
+
+/* ----------------------------------------------------------
+ *   Common Settings : mainEndArea
+ *   ---------------------------------------------------------- */
+#mainEndArea{
+padding:0 10px 13px;
+}
+
+
+
+
+/* ----------------------------------------------------------
+ *   Common Settings : MainArea
+ *   ---------------------------------------------------------- */
+#mainArea{
+}
+
+.webView01 #mainArea,
+.login #mainArea{
+background:transparent url(/img/smartphone/touch/common/bg_headend002.gif) repeat-x 0 0;
+}
+
+
+/* ----------------------------------------------------------
+ *   Common Settings : gHeader01
+ * ---------------------------------------------------------- */
+.gHeader01{
+overflow:hidden;
+background:-webkit-gradient(linear, 0 0%, 0% 100%, from(white), to(#F2F2F2));
+min-height:37px;
+z-index:8200;
+border-bottom:1px solid #ccc;
+}
+
+.gHeader01 h1{
+float:left;
+padding:5px 0 5px 10px;
+text-align:left;
+}
+
+.gHeader01 h1 > span,
+.gHeader01 h1 > a{
+display:block;
+height:23px;
+text-align:left;
+line-height:0;
+}
+
+.gHeader01 .topNavigation01{
+overflow:hidden;
+float:right;
+}
+
+.gHeader01 .topNavigation01 > li{
+float:right;
+width:67px;
+height:37px;
+text-align:left;
+}
+
+.gHeader01 .topNavigation01 > li > p > span,
+.gHeader01 .topNavigation01 > li > p > a{
+display:block;
+width:67px;
+height:37px;
+background:url(img/head_appli001.png) no-repeat 0 0;
+text-indent:-99999px;
+}
+
+.gHeader01 .topNavigation01 > li > p > span > span,
+.gHeader01 .topNavigation01 > li > p > a > span{
+display:block;
+width:67px;
+height:37px;
+}
+
+.gHeader01 .topNavigation01 .appliNavi01 > p > span,
+.gHeader01 .topNavigation01 .appliNavi01 > p > a{
+background-image:url(img/head_appli002.png);
+}
+
+
+
+

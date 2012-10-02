@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="Android SDK for mixi apps" default="package">
+
+  <property name="project_name" value="mixiAndroidSDK" />
+  <property name="sdk_version" value="1.8" />
+
+  <property name="target_dir" location="target" />
+  <property name="dist_dir" location="${target_dir}/${project_name}" />
+  <property name="src_dir" location="src" />
+  <property name="res_dir" location="res" />
+  <property name="assets_dir" location="assets" />
+  <property name="dist_src_dir" location="${dist_dir}/src" />
+  <property name="dist_res_dir" location="${dist_dir}/res" />
+  <property name="dist_gen_dir" location="${dist_dir}/gen" />
+  <property name="dist_assets_dir" location="${dist_dir}/assets" />
+
+  <target name="package" description="Make a distributed package file.">
+    <mkdir dir="${dist_src_dir}" />
+    <mkdir dir="${dist_res_dir}" />
+    <mkdir dir="${dist_gen_dir}" />
+    <copy todir="${dist_src_dir}">
+        <fileset dir="${src_dir}">
+          <include name="**/*.aidl" />
+          <include name="**/*.java" />
+        </fileset>
+    </copy>
+    <copy todir="${dist_res_dir}">
+        <fileset dir="${res_dir}">
+          <include name="**/*.xml" />
+          <include name="**/*.png" />
+        </fileset>
+    </copy>
+    <copy todir="${dist_assets_dir}">
+        <fileset dir="${assets_dir}">
+          <include name="**/*.html" />
+          <include name="**/*.css" />
+          <include name="**/*.png" />
+        </fileset>
+    </copy>
+    <copy todir="${dist_dir}">
+      <fileset dir=".">
+        <include name="AndroidManifest.xml" />
+        <include name="default.properties" />
+        <include name="proguard.cfg" />
+        <include name=".classpath" />
+        <include name=".project" />
+        <include name="LICENSE" />
+      </fileset>
+    </copy>
+    <zip destfile="${target_dir}/${project_name}-${sdk_version}.zip" basedir="${target_dir}" />
+    <tar destfile="${target_dir}/${project_name}-${sdk_version}.tar.gz" compression="gzip">
+      <zipfileset src="${target_dir}/${project_name}-${sdk_version}.zip" />
+    </tar>
+  </target>
+
+  <target name="clean" description="Remove the distributed package file and related files.">
+    <delete dir="${target_dir}" />
+  </target>
+
+</project>

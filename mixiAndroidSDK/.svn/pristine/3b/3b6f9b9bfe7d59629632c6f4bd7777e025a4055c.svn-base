@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.3//EN" "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
+
+<!--
+    This configuration file was written by the eclipse-cs plugin configuration editor
+-->
+<!--
+    Checkstyle-Configuration: android-check
+    Description: none
+-->
+<module name="Checker">
+  <property name="severity" value="warning"/>
+  <module name="TreeWalker">
+    <module name="JavadocMethod">
+      <property name="scope" value="public"/>
+      <property name="allowMissingPropertyJavadoc" value="true"/>
+    </module>
+    <module name="JavadocType"/>
+    <module name="JavadocVariable">
+      <property name="excludeScope" value="private"/>
+    </module>
+    <module name="JavadocStyle">
+      <property name="checkFirstSentence" value="false"/>
+    </module>
+    <module name="BooleanExpressionComplexity"/>
+    <module name="HideUtilityClassConstructor"/>
+    <module name="ArrayTypeStyle"/>
+    <module name="AvoidStarImport"/>
+    <module name="IllegalImport"/>
+    <module name="RedundantImport"/>
+    <module name="UnusedImports"/>
+    <module name="EmptyForIteratorPad"/>
+    <module name="GenericWhitespace"/>
+    <module name="MethodParamPad"/>
+    <module name="NoWhitespaceAfter"/>
+    <module name="NoWhitespaceBefore"/>
+    <module name="OperatorWrap"/>
+    <module name="ParenPad"/>
+    <module name="TypecastParenPad"/>
+    <module name="WhitespaceAfter"/>
+    <module name="WhitespaceAround"/>
+    <module name="AvoidNestedBlocks"/>
+    <module name="EmptyBlock"/>
+    <module name="LeftCurly"/>
+    <module name="NeedBraces"/>
+    <module name="RightCurly"/>
+    <module name="ArrayTypeStyle"/>
+    <module name="TodoComment"/>
+    <module name="UpperEll"/>
+    <module name="MissingSwitchDefault"/>
+    <module name="DefaultComesLast"/>
+    <module name="ModifiedControlVariable"/>
+    <module name="SimplifyBooleanExpression"/>
+    <module name="StringLiteralEquality"/>
+    <module name="SuperClone"/>
+    <module name="IllegalCatch"/>
+    <module name="IllegalThrows"/>
+    <module name="JUnitTestCase"/>
+    <module name="DeclarationOrder"/>
+    <module name="ParameterAssignment"/>
+    <module name="MultipleVariableDeclarations"/>
+    <module name="ArrayTrailingComma"/>
+    <module name="InnerAssignment"/>
+    <module name="HiddenField">
+      <property name="ignoreConstructorParameter" value="true"/>
+      <property name="ignoreSetter" value="true"/>
+    </module>
+    <module name="LineLength">
+      <property name="max" value="100"/>
+      <property name="tabWidth" value="4"/>
+    </module>
+    <module name="MemberName">
+      <property name="applyToPublic" value="false"/>
+      <property name="format" value="^m[a-zA-Z0-9]*$"/>
+    </module>
+    <module name="AbstractClassName">
+      <property name="format" value="^Abstract.*$"/>
+    </module>
+    <module name="ConstantName"/>
+    <module name="LocalVariableName"/>
+    <module name="StaticVariableName">
+      <property name="format" value="^s[a-zA-Z0-9]*$"/>
+    </module>
+    <module name="MethodName"/>
+    <module name="FinalParameters">
+      <property name="severity" value="ignore"/>
+      <metadata name="net.sf.eclipsecs.core.lastEnabledSeverity" value="inherit"/>
+    </module>
+    <module name="MagicNumber">
+      <property name="ignoreNumbers" value="-1, 0, 1, 2,1000,3000,5000"/>
+    </module>
+  </module>
+
+  <!-- Header -->
+  <module name="Header">
+    <property name="headerFile" value="${basedir}/java.header"/>
+  </module>
+
+  <!-- SuppressionFilter -->
+  <module name="SuppressionFilter">
+    <property name="file" value="${basedir}/suppressions.xml"/>
+  </module>
+</module>
