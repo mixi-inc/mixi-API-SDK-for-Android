@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="no_permission_error">エラーが発生しました。アプリケーション開発元に問い合せてください。</string>
-    <string name="loading_message">読み込み中</string>
-    <string name="err_unsupported_versions">Unsupported Versions</string>
-</resources>
