@@ -16,6 +16,7 @@
 package jp.mixi.android.sdk;
 
 import android.Manifest;
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog.Builder;
 import android.content.ActivityNotFoundException;
@@ -87,6 +88,7 @@ import java.util.zip.GZIPInputStream;
  * MixiContainerの実装クラス
  * 
  */
+@TargetApi(3)
 class MixiContainerImpl implements MixiContainer {
     /** アクセストークンのパラメータ名 */
     static final String ACCESS_TOKEN = "access_token";
@@ -121,6 +123,7 @@ class MixiContainerImpl implements MixiContainer {
     private static final String ERROR_STR = "error";
     private static final String ERROR_CODE_STR = "errorCode";
     private static final String ERROR_MESSAGE_STR = "errorMessage";
+    private static final String ACCOUNT_EXCEPTION = "mixiAccountException";
 
     /** 公式アプリの対応バージョン */
     private static final int SUPPORTED_VERSION = 19;
@@ -542,6 +545,13 @@ class MixiContainerImpl implements MixiContainer {
                 if (code == ErrorInfo.SERVER_ERROR) {
                     listener.onError(new ErrorInfo(
                             data.getStringExtra(ERROR_MESSAGE_STR), code));
+                    return;
+                } else if (code == ErrorInfo.OTHER_ERROR
+                        && ACCOUNT_EXCEPTION.equals(data
+                                .getStringExtra(ERROR_STR))) {
+                    listener.onError(new ErrorInfo(data
+                            .getStringExtra(ERROR_MESSAGE_STR),
+                            ErrorInfo.OFFICIAL_APP_ACCOUNT_ERROR));
                     return;
                 }
                 listener.onFatal(new ErrorInfo(

@@ -32,6 +32,16 @@ public class ErrorInfo {
     public static final int OFFICIAL_APP_EXPIRED = 5;
     /** アプリケーションの認可が取り消されている */
     public static final int REVOKE_AUTHORIZE = 6;
+    /**
+     * 公式アプリ上のアカウント情報が壊れている.
+     * 
+     * <pre>
+     * startActivity(getPackageManager().getLaunchIntentForPackage(&quot;jp.mixi&quot;));
+     * </pre>
+     * 
+     * などで、公式アプリ上でログインを促して下さい。
+     */
+    public static final int OFFICIAL_APP_ACCOUNT_ERROR = 98;
     /** 公式アプリで発生した、その他のエラー */
     public static final int OTHER_ERROR = 99;
     /**

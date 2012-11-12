@@ -15,6 +15,7 @@
  */
 package jp.mixi.android.sdk;
 
+import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -47,6 +48,7 @@ import java.util.Map;
  * 
  * WebVewダイアログ表示クラス
  */
+@TargetApi(8)
 class MixiDialog extends Dialog {
     private static final String TAG = "MixiDialog";
 
