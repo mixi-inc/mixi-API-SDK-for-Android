@@ -22,16 +22,16 @@ mixi API SDK for Android™ の特徴は、以下の通りです。
 
 利用可能なAPI
 -------------
- - People API
- - Groups API
- - People lookup API
- - Voice API
- - Updates API
- - Check API
- - Photo API
- - Message API
- - Diary API
- - Check-in API
+ - [People API][1]
+ - [Groups API][2]
+ - [People lookup API][3]
+ - [Voice API][4]
+ - [Updates API][5]
+ - [Check API][6]
+ - [Photo API][7]
+ - [Message API][8]
+ - [Diary API][9]
+ - [Check-in API][10]
 
 ※基本的に提供されているすべての Graph API が利用可能です。
 
@@ -39,5 +39,17 @@ License
 -------
 Apache License, Version 2.0  
 http://www.apache.org/licenses/
+
+
+[1]:http://developer.mixi.co.jp/connect/mixi_graph_api/mixi_io_spec_top/people-api/
+[2]:http://developer.mixi.co.jp/connect/mixi_graph_api/mixi_io_spec_top/groups-api/
+[3]:http://developer.mixi.co.jp/connect/mixi_graph_api/mixi_io_spec_top/people-lookup-api/
+[4]:http://developer.mixi.co.jp/connect/mixi_graph_api/mixi_io_spec_top/voice-api/
+[5]:http://developer.mixi.co.jp/connect/mixi_graph_api/mixi_io_spec_top/updates-api/
+[6]:http://developer.mixi.co.jp/connect/mixi_graph_api/mixi_io_spec_top/check-api/
+[7]:http://developer.mixi.co.jp/connect/mixi_graph_api/mixi_io_spec_top/photo-api/
+[8]:http://developer.mixi.co.jp/connect/mixi_graph_api/mixi_io_spec_top/message-api/
+[9]:http://developer.mixi.co.jp/connect/mixi_graph_api/mixi_io_spec_top/diary-api/
+[10]:http://developer.mixi.co.jp/connect/mixi_graph_api/mixi_io_spec_top/check-in-api/
 
 
