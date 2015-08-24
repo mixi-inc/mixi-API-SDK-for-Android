@@ -14,7 +14,7 @@ test:
   override:
     - ./gradlew build
     # copy the build outputs to artifacts
-    - cp -r AndroidDeviceCompatibility/build/outputs $CIRCLE_ARTIFACTS
+    - cp -r lib/build/outputs $CIRCLE_ARTIFACTS
     # copy the test results to the test results directory.
-    - cp -r AndroidDeviceCompatibility/build/outputs/androidTest-results/* $CIRCLE_TEST_REPORTS
+    - cp -r lib/build/outputs/androidTest-results/* $CIRCLE_TEST_REPORTS
 
