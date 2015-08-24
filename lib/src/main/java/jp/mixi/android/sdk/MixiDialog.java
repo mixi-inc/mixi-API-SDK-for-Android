@@ -15,6 +15,7 @@
  */
 package jp.mixi.android.sdk;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Dialog;
 import android.content.Context;
@@ -32,8 +33,6 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.TextView;
 
-import jp.mixi.android.sdk.util.UrlUtils;
-
 import org.apache.http.protocol.HTTP;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -43,6 +42,8 @@ import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+
+import jp.mixi.android.sdk.util.UrlUtils;
 
 /**
  * 
@@ -90,6 +91,7 @@ class MixiDialog extends Dialog {
 
     }
 
+    @SuppressLint("JavascriptInterface")
     private WebView setUpWebView(WebView webView) {
         Log.v(TAG, "setwebview");
         webView.getSettings().setUserAgentString(Constants.USER_AGENT);
