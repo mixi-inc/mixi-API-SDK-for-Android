@@ -507,7 +507,7 @@ class MixiContainerImpl implements MixiContainer {
                 }
             }
         };
-        tasc.execute(null);
+        tasc.execute(new Void[0]);
     }
 
     @Override
