@@ -20,7 +20,7 @@ mixi API SDK for Android™ の特徴は、以下の通りです。
  - Gradle
 
 ```groovy
-compile 'jp.mixi:mixi-api-sdk-android:1.0.0'
+compile 'jp.mixi:mixi-api-sdk-android:1.8.0'
 ```
 
 サポート端末
