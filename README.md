@@ -14,6 +14,15 @@ mixi API SDK for Android™ の特徴は、以下の通りです。
  - シングルサインオンが可能でユーザ認可時のパスワード入力不要
  - アプリケーション内にsecretを埋め込む必要がないため、セキュリティ向上
 
+ダウンロード
+-------
+
+ - Gradle
+
+```groovy
+compile 'jp.mixi:mixi-api-sdk-android:1.0.0'
+```
+
 サポート端末
 ------------
 本SDKにてサポートするAndroid端末は以下の通りです。
@@ -51,5 +60,3 @@ http://www.apache.org/licenses/
 [8]:http://developer.mixi.co.jp/connect/mixi_graph_api/mixi_io_spec_top/message-api/
 [9]:http://developer.mixi.co.jp/connect/mixi_graph_api/mixi_io_spec_top/diary-api/
 [10]:http://developer.mixi.co.jp/connect/mixi_graph_api/mixi_io_spec_top/check-in-api/
-
-
