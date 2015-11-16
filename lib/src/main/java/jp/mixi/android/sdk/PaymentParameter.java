@@ -53,7 +53,6 @@ public class PaymentParameter {
     public String signature;
     private int version = 1;
 
-    /**  */
     public int getVertion() {
         return version;
     }

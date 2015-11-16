@@ -42,9 +42,6 @@ import android.util.Log;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import jp.mixi.android.IRemoteAuthenticator;
-import jp.mixi.android.sdk.util.UrlUtils;
-
 import org.apache.http.Header;
 import org.apache.http.HeaderElement;
 import org.apache.http.HttpEntity;
@@ -83,6 +80,9 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
 import java.util.zip.GZIPInputStream;
+
+import jp.mixi.android.IRemoteAuthenticator;
+import jp.mixi.android.sdk.util.UrlUtils;
 
 /**
  * MixiContainerの実装クラス
@@ -751,7 +751,6 @@ class MixiContainerImpl implements MixiContainer {
      * セッションの復元
      * 
      * @param contextWrapper アプリのactivity
-     * @param listener 処理完了時、またはエラー時に実行される処理を記述してください(ここではエラーのみのはず)
      * @return セッションの復元に成功した場合はtrue
      * @throws RemoteException
      */
@@ -970,8 +969,7 @@ class MixiContainerImpl implements MixiContainer {
 
     /**
      * 共通で設定するヘッダーを設定
-     * 
-     * @param method
+     *
      */
     private Header[] getCommonHeaders() {
         Header[] headers = new Header[3];
