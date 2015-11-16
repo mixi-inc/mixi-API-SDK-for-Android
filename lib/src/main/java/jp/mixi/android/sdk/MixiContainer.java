@@ -116,7 +116,7 @@ public interface MixiContainer {
      * 
      * httpメソッドはパラメータにて指定されたもので実行される パラメータは
      * <p>
-     * name1=value1&name2=value2
+     * name1=value1&amp;name2=value2
      * </p>
      * のように展開される
      * 
@@ -271,7 +271,7 @@ public interface MixiContainer {
      * メソッドを実行すると課金のためのintentが{@link Activity#startActivityForResult(Intent, int)}で実行されます。 その後、
      * {@link Activity#onActivityResult(int, int, Intent)}が実行されます requestCodeは、
      * {@link MixiContainer#authorize(Activity, String[], int, CallbackListener)}、
-     * {@link MixiContainer#logout(Activity, String[], int, CallbackListener)}と同じ値にならないようにしてください。
+     * {@link MixiContainer#logout(Activity, int, CallbackListener)}と同じ値にならないようにしてください。
      * 
      * 
      * <pre>
